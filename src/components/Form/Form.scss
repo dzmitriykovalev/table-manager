@@ -1,0 +1,16 @@
+@import "../../variables";
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 30vw;
+
+  @media only screen and (max-width: $screen-md-min) {
+    width: 100vw;
+    height: 100vh;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    padding: 50px 5%;
+  }
+}

@@ -1,0 +1,16 @@
+$border-color-input: rgba(128, 128, 128, 0.6);
+$border-color-input-focus: rgba(0, 0, 255, 0.3);
+
+@mixin input {
+  min-height: 40px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid $border-color-input;
+  outline: none;
+  box-sizing: border-box;
+  padding: 0 3%;
+
+  &:focus {
+    border: 1px solid $border-color-input-focus;
+  }
+}

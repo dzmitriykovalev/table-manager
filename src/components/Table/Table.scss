@@ -1,0 +1,51 @@
+@import "../../variables";
+
+$table-head-background: #365fb7;
+$text-header-color: rgba(0, 0, 0, 0.45);
+$padding-cell: 0 2%;
+
+.table-container {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+
+
+  .btn-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+
+    .table-head {
+      height: 45px;
+      background-color: $table-head-background;
+      border: 1px solid $table-head-background;
+
+      th {
+        padding: $padding-cell;
+        text-align: left;
+        font-weight: 500;
+        font-size: 13px;
+        color: $text-header-color;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $screen-md-min) {
+    .table {
+      display: block;
+
+      tbody, th, td, tr {
+        display: block;
+      }
+
+      .table-head {
+        display: none;
+      }
+    }
+  }
+}

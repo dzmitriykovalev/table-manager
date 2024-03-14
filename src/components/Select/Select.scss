@@ -1,0 +1,16 @@
+@import '../../mixins';
+
+.select {
+  @include input();
+  color: gray;
+
+  .option {
+    padding: 5px 2%;
+    min-height: 15px;
+    color: gray;
+  }
+}
+
+.selected {
+  color: black;
+}

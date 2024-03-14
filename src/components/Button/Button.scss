@@ -1,0 +1,41 @@
+$bg-main: #6e90de;
+$bg-disabled: gray;
+$color-error: red;
+
+.button {
+  border: none;
+  outline: none;
+  min-height: 40px;
+  min-width: 100px;
+  border-radius: 8px;
+
+  &:disabled {
+    background: $bg-disabled;
+    color: white;
+
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.filled-main {
+  background: $bg-main;
+  color: white;
+}
+
+.text-main {
+  background: transparent;
+  color: $bg-main;
+  text-decoration: underline;
+}
+
+.text-error {
+  background: transparent;
+  color: $color-error;
+  text-decoration: underline;
+}

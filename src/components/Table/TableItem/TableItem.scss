@@ -1,0 +1,88 @@
+@import "../Table";
+@import '../../../variables';
+
+$border-color: rgba(0, 0, 0, 0.45);
+$text-row-color: rgba(0, 0, 0, 0.7);
+
+.tr {
+  border: 1px solid $border-color;
+  height: 45px;
+
+  &:first-of-type {
+    border-top: 0;
+  }
+
+  .td {
+    padding: $padding-cell;
+    border-right: 1px solid $border-color;
+    text-align: left;
+    font-weight: 500;
+    font-size: 13px;
+    color: $text-row-color;
+
+    &:first-of-type {
+      width: 10%;
+    }
+
+    &:nth-of-type(2) {
+      width: 15%;
+    }
+
+    &:nth-of-type(3) {
+      width: 15%;
+    }
+
+    &:nth-of-type(4) {
+      width: 25%;
+    }
+  }
+
+  .btn-table-row {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+}
+
+@media only screen and (max-width: $screen-md-min) {
+  .tr {
+    border: 1px solid $border-color;
+    height: auto;
+    border-top: none;
+    padding: 3%;
+
+    &:first-of-type {
+      border-top: 1px solid $border-color;
+    }
+
+    .td {
+      text-align: right;
+      border: none;
+      padding: 10px 0;
+      position: relative;
+      min-height: 37px;
+      width: 100%;
+
+      &:first-of-type {
+        width: 100%;
+      }
+
+      &:nth-of-type(2) {
+        width: 100%;
+      }
+
+      &:nth-of-type(3) {
+        width: 100%;
+      }
+
+      &:nth-of-type(4) {
+        width: 100%;
+      }
+
+      &:before {
+        float: left;
+        content: attr(data-label);
+      }
+    }
+  }
+}

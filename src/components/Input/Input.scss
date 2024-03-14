@@ -1,0 +1,12 @@
+@import '../../mixins';
+
+.input {
+  @include input();
+}
+
+.error {
+  color: red;
+  font-size: 11px;
+  margin: 0;
+  padding: 4px 0;
+}
